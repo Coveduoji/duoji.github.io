@@ -1,0 +1,42 @@
+/* CSS样式 */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .categories {
+        background-color: #f1f1f1;
+        padding: 20px;
+        /* 居中显示 */
+        /* text-align: center; */
+      }
+
+      .category {
+        display: inline-block;
+        margin-right: 10px;
+        /* background-color: bisque; */
+        font-weight: bold;
+      }
+      .category.active {
+        color: blue;
+      }
+
+      .gallery {
+        column-count: 4; /* 设置列数 */
+        column-gap: 20px; /* 列之间的间距 */
+        max-width: 100%; /* 设置图库的最大宽度 */
+        margin: 0 auto; /* 水平居中 */
+        padding: 20px;
+      }
+
+      .image {
+        display: block;
+        margin-bottom: 20px; /* 设置图片间的垂直间距 */
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+      }
+
+      /* .image:focus {
+        transform: scale(3);
+      } */

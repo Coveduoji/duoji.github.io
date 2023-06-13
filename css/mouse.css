@@ -1,0 +1,29 @@
+/* 鼠标美化 */
+html,body{
+  cursor: none;
+}
+.circle-cursor1 {
+  position: fixed;
+  top: -3px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(237, 230, 230);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.circle-cursor2 {
+  position: fixed;
+  top: -8px;
+  left: -8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgba(87, 84, 84, 0.557);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
+}

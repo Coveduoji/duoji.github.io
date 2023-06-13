@@ -1,0 +1,302 @@
+/* 网页背景 */
+body{
+  background-image:url('https://s1.ax1x.com/2023/06/03/pC9MYEn.jpg') ;
+  /* 背景不重复 */
+  background-repeat: no-repeat;
+  /* 背景覆盖方式 */
+  background-size:100% 600px;
+}
+/*容器*/
+.container {
+  position: absolute; /* 将 <div> 元素设置为绝对定位 */
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 480px;
+  border-radius: 30px; /*圆角*/
+  background-color: rgba(2, 2, 2, 0.365);
+  transform: translate(-50%, -50%);
+}
+/* 左边模块 */
+.person{
+  position: absolute;
+  background-color: rgba(50, 153, 153, 0);
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+left: 215px;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+/* 旋转圆圈 */
+.circle {
+  position: relative;
+  background-color: rgba(255, 248, 248, 0);
+  top: 43px;
+  left: 74px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%; /*圆角*/
+  border: 2px solid rgba(255, 255, 255, 0.621);
+  /* transform: translate(-50%, -50%); */
+  animation: round 3s infinite;
+}
+@keyframes round{
+  0%{
+    rotate: 0deg;
+  }
+100%{
+    rotate: 360deg;
+  }
+}
+
+.circle:before{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  content:'';
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/*头像*/
+.header {
+  position: absolute;
+  background-color: rgba(176, 58, 58, 0);
+  top: 35px;
+  /* left: 50%; */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /*圆角*/
+  /* border: 10px solid rgb(10, 2, 2); */
+  /* transform: translate(-50%, -50%); */
+  /* animation: round 3s infinite; */
+}
+
+
+.headshot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  /* 设置图片容器的宽度 */
+  height: 200px;
+  /* 设置图片容器的高度 */
+  border-radius: 50%;
+  /* 将图片容器的形状设为圆形 */
+  overflow: hidden;
+  /* 隐藏溢出容器的部分 */
+  transform: translate(-50%, -50%);
+}
+.headshot img {
+  position: absolute;
+    /* 设置图片为绝对定位 */
+    top: 50%;
+    /* 将图片的上边缘与容器的垂直中心对齐 */
+    left: 50%;
+    /* 将图片的左边缘与容器的水平中心对齐 */
+    transform: translate(-50%, -50%);
+    /* 使用transform属性将图片居中 */
+  width: 100%;
+  /* 图片宽度充满容器 */
+  height: 100%;
+  /* 图片高度充满容器 */
+  object-fit: cover;
+  /* 保持图片比例并填充容器 */
+}
+/* 个人介绍 */
+.introduction{
+  position: absolute;
+  /* background-color: rgba(90, 176, 176, 0); */
+  width: 280px;
+  height: 80px;
+  top: 65%;
+  /* left: 20%; */
+  border-bottom: 2px solid #ffffff;
+  /* transform: translate(-50%, -50%); */
+}
+.introduction h1{
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+color: #ffffff;
+}
+.introduction h2{
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* 个人链接 */
+.personal_link {
+  position: absolute;
+  background-color: rgba(250, 235, 215, 0);
+  width: 280px;
+  height: 30px;
+  top: 85%;
+  /* left: 20%; */
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: translate(-50%, -50%); */
+}
+.personal_link img {
+  margin: 8px;
+    /* position: absolute; */
+    width: 25px;
+    height: 25px;
+}
+
+/* 右边模块 */
+
+.function_container {
+  position: absolute;
+  background-color: rgba(198, 148, 83, 0.561);
+  top: 50%;
+  left: 70%;
+  width: 560px;
+  height: 430px;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+}
+
+/* 诗句 */
+.top1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 100px;
+  top: 18%;
+  left: 25%;
+  color: #ffffff;
+  border-radius: 5px;
+  /* box-shadow: 5px 5px 10px 0px lightgray; */
+  background-color: rgba(37, 81, 193, 0.581)  ;
+  transform: translate(-50%, -50%);
+}
+
+/* 效果 */
+/* .top1:hover{        
+  color: black;
+  margin: -2px;
+} */
+
+.top1-text {
+  text-align: center;
+}
+
+
+/* 天气日期时间 */
+.top2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 100px;
+  top: 18%;
+  left: 75%;
+  border-radius: 5px;
+  /* box-shadow: 5px 5px 10px 0px lightgray; */
+  background-color: rgba(37, 81, 193, 0.581);
+  transform: translate(-50%, -50%);
+}
+.date {
+  position: absolute;
+  top: 15%;
+  color: #ffffff;
+}
+.time {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+  color: aliceblue;
+}
+
+
+
+/* 功能 */
+
+.function-box{
+  background-color: rgba(58, 58, 146, 0);
+  position: relative;
+  width: 100%;
+  height: 60%;
+  top: 70%;
+  left: 50%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  transform: translate(-50%, -50%);
+}
+.drawer{
+  background-color: #38313100;
+  width: 33.3%;
+  height: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.contentbox{
+  background-color: #963b3b7d;
+  width: 150px;
+  height: 80px;
+  top: 50%;
+  left:50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+/* 功能区美化 */
+.contentbox img{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.contentbox h1{
+  position: absolute;
+  font-size: 30px;
+  color: #000000;
+  top: 23%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+.contentbox h2{
+  color: #000;
+  position: absolute;
+  font-size: 13px;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.contentbox h3{
+position: absolute;
+  font-size: 20px;
+  color: #000000;
+  top: 25%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.contentbox:hover{
+  color: black;
+  margin: 1px;
+  
+}
+
+
+

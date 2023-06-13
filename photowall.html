@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>照片墙</title>
+    <link rel="stylesheet"type="text/css" href="css/photo-style.css">
+    <link rel="stylesheet"type="text/css"href="css/mouse.css">
+    <script src="js\mouse.js"></script>
+    <div class="circle-cursor1"></div>
+    <div class="circle-cursor2"></div>
+  </head>
+  <body>
+
+
+    <div class="categories">
+  <span class="category" onclick="filterImages('all',event)">全部</span>
+  <span class="category" onclick="filterImages('baijing',event)">北京</span>
+  <span class="category" onclick="filterImages('me',event)">我</span>
+  <span class="category" onclick="filterImages('her',event)">她</span>
+</div>
+
+
+    <div class="gallery" id="gallery">
+      <!-- image后跟me\you\her标签即可分类 -->
+      <img class="image you"src="0"onclick="focusImage(this)"/>
+      <img class="image me" src="1" onclick="focusImage(this)" />
+      <img class="image her" src="2" onclick="focusImage(this)" />
+      <img class="image her" src="3" onclick="focusImage(this)" />
+      <img class="image her" src="4" onclick="focusImage(this)" />
+      <img class="image" src="5" onclick="focusImage(this)" />
+      <img class="image" src="5.5" onclick="focusImage(this)"/>
+      <img class="image" src="6" onclick="focusImage(this)" />
+      <img class="image" src="7" onclick="focusImage(this)" />
+      <img class="image" src="8" onclick="focusImage(this)" />
+      <img class="image" src="9" onclick="focusImage(this)" />
+      <!-- 添加更多照片 -->
+    </div>
+
+    <script>
+function filterImages(categories) {
+  var images = document.getElementsByClassName("image");
+  var categoryElements = document.getElementsByClassName("category");
+
+  // 移除所有分类的active类
+  for (var i = 0; i < categoryElements.length; i++) {
+    categoryElements[i].classList.remove("active");
+  }
+
+  // 遍历每个图像元素
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+
+    if (categories === "all") {
+      image.style.display = "block";
+    } else if (image.classList.contains(categories)) {
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
+  }
+
+  // 将当前分类添加active类
+  var currentCategory = event.target;
+  currentCategory.classList.add("active");
+}
+
+
+
+
+
+
+
+
+  // function focusImage(image) {
+  //   // 切换图像元素的"focus"类名
+  //   image.classList.toggle("focus");
+  // }
+</script>
+
+  </body>
+</html>
